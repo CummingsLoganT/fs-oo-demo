@@ -18,38 +18,38 @@ console.log(person.firstname);
 // console.log(person["firstname"]); ~dislike~
 // console.log(person[firstname]); will not work because scope
 
-// how do i access the movie of LoTR in my person object
-// console.log(person.favorites.movies[1]);
+// how do i access the movie of index[1] in my person object
+console.log(person.favorites.movies[1]);
 
 // lets invoke the greeting function
-    // person.greeting();
+person.greeting();
 
 // lets practice some destructuring
-    // let {lastname} = person
-    // console.log(lastname);
-    // console.log(person.lastname);
+// let {lastname} = person
+// console.log(lastname);
+console.log(person.lastname);
 
-    // let {greeting} = person
-    // greeting();
+let {greeting} = person
+greeting();
 
 let {firstname , lastname , age: yearsOfWisdom} = person;
-// console.log(firstname , lastname , age);
-// firstname = "Nicole";
-// console.log(firstname , person.firstname);
-// console.log(yearsOfWisdom);
+console.log(firstname , lastname , yearsOfWisdom);
+firstname = "Nicole";
+console.log(firstname , person.firstname);
+console.log(yearsOfWisdom);
 
 // review of looping objects using for...in loops
-// for (let prop in person) {
-//     console.log(`the property of ${prop} has a value of: ${person[prop]}`);
-// }  /* only ever use bracket notation inside for loops */
+for (let prop in person) {
+    console.log(`the property of ${prop} has a value of: ${person[prop]}`);
+}  /* only ever use bracket notation inside for loops */
 
 
 // talking about adding and deleting properties
 person.job = "instructor";
-// console.log(person.job);
+console.log(person.job);
 
 delete person.job;
-// console.log(person.job);
+console.log(person.job);
 
 
 // CLASSES
@@ -67,8 +67,8 @@ class Dog {
 }
 
 const finn = new Dog ("finn" , "Goldendoodle" , 2);
-// console.log(finn);
-// finn.greeting();
+console.log(finn);
+finn.greeting();
 
 // now lets tackle class extension using puppies
 class Puppy extends Dog {
@@ -80,5 +80,5 @@ class Puppy extends Dog {
 }
 
 const marmy = new Puppy('Marmy' , 'Bernese' , 1 , true);
-// console.log(marmy);
+console.log(marmy);
 
